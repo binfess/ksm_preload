@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8)
 project(KSM_PRELOAD)
 
 add_library(ksm_preload SHARED libksm_preload.c)
-target_link_libraries(ksm_preload dl)
+target_link_libraries(ksm_preload dl pthread)
 install(
     TARGETS ksm_preload
     RUNTIME DESTINATION bin
